@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문-4(사용자 입력 이용)</title>
+</head>
+<body>
+  <script>
+    //사용자로부터 입력받는 부분
+    var data =prompt("어디까지 숫자를 출력할까요?","숫자입력");
+    data = parseInt(data);
+    //string -> number
+    data = parseInt(data);
+    //  반드시 반복문에 {} 중괄호 붙이기.
+    for(var i=1; i<=data; i++){
+      document.write(i+"<br>");
+    }
+  </script>
+  
+</body>
+</html>
