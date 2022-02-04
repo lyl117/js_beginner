@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 입문-1</title>
+  <script>
+    //1.변수의 활용 
+    // message를 console.log();를 이용해서 출력해 보세요.
+    var message="출력될 문자열입니다.";
+    
+    //2.기본자료형-1
+    //console.log안의 빈칸에 알맞는 값을 넣어서 변수 n의 자료형을 출력해 보세요.
+      var n = 1;
+      console.log(typeof(n));
+    
+    //3.기본자료형-2
+    //console.log안의 빈칸에 알맞는 값을 넣어서 변수 b의 자료형을 출력해 보세요.
+    var b = true;
+    console.log(typeof(b));
+
+    //4.기본자료형-3
+    //console.log를 이용해서 변수 s의 자료형을 출력해 보세요.
+    var s = "문자열입니다."
+    console.log(typeof(s))
+
+    //5.Number -1
+    //변수 str에 저장된 문자열을 정수로 변환해서 pi_int에 저장하세요.
+    var str="3.141592는 Pi의 근사값입니다."
+    var pi_int = parseInt(str);
+    console.log("pi_int의 값은", pi_int, "입니다." );
+
+    //6.Number - 2
+    //변수 str에 저장된 문자열을 실수로 변환해서 pi_float에 저장하세요.
+    var str="3.141592는 Pi의 근사값입니다."
+    var pi_float = parseFloat(str);
+    console.log("pi_float의 값은", pi_float, "입니다." );
+
+    //7.String -1
+    //코트 첫번째 줄의 문자열에 escape character를 추가해서 실행하면 다음과 같이 출력되도록 만들어 보세요
+    console.log("쌍따옴표\"를 문자열 안에 쓸 수 있습니다.");
+
+    //8.string - 2
+    //코트 첫번째 줄의 문자열에 escape character를 추가해서 출력시 다음과 같이 두줄로 나오도록 만들어 보세요.
+    console.log("문자열입니다.\n그리고 줄을 바꿔서 다음 문자열입니다.");
+
+    //9.Object -1
+    //변수 obj를 객체로 선언해서 name과 age라는 속성을 추가하고, 각각에 자신의 이름과 나이를 입력하세요.
+    var obj_ = {};
+    var obj = {name: "이유림",age:28};
+
+    //10.Object - 2
+    //book의 title을 이용해서 코드 2번째 줄이 책의 제목을 출력하도록 만들어 보세요.
+    var book = {"title":"어린왕자"};
+    console.log("제목:",book["title"]);
+
+    //11.undefined와 null -1
+    //undefined 값을 가진 변수 a와, null 값을 가진 변수 b를 선언해보세요.
+    // undefined 값을 가진 변수 a를 선언하세요
+    var a;
+    // null 값을 가진 변수 b를 선언해보세요.
+    var b = null;
+
+    console.log("a의 자료형 :", typeof(a), "입니다.");
+    console.log("b의 자료형 :", typeof(b), "이고, 값은", b, "입니다.");
+    
+ </script>
+</head>
+<body>
+  
+</body>
+</html>
