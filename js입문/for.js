@@ -138,12 +138,29 @@ while(i >=1){
 }
 
 //0,1,2,3,4개 띄어서 별찍기 
-for(let i=5; i>=1; i--){
-  console.log(''.repeat(5-i)+'*'.repeat(i));
+for (let i = 5; i > 0; i--) {
+  console.log(' ' .repeat(5 - i) + '*' .repeat(i))
 }
 
+// while문으로 별찍기 
+let i = 0;
+while(i <5){
+  console.log(''.repeat(5-i)+'*'.repeat(i));
+  i++;
+}
 
 //4,3,2,1,0개 띄어서 별찍기 
 for(let i=1 ; i <=5 ; i++){
   console.log(' '.repeat(5-i) + '*'.repeat(i)) //1,2,3,4,5 공백같이찍기
+}
+// while문으로 만들기 
+let i = 1;
+while(i <=5){
+  console.log(' '.repeat(5-i) + '*'.repeat(i))
+  i++;
+}
+
+// 트리만들기
+for (var i = 1; i <= 9; i = i+2){  // 별의 최대 개수 9개; 별의 개수는 1-3-5-7-9로 2개씩 증가
+  console.log(" ".repeat((9-i)/2) + "*".repeat(i))
 }
