@@ -67,13 +67,26 @@ for(let i = 0; i < 5; i++){
 
 //별 찍기
 //차례대로 1-5 찍기
+//01.
 for(let i=0; i<=5; i++){
   console.log('*'.repeat(i));
+}
+//02.while문으로 만들어보기
+let i =0;
+while (i <= 5) {
+  console.log('*'.repeat(i));
+  i++;
 }
 // 많은 것부터 5-1순서대로 찍기
 //01.
 for(let i=5; i>=1; i--){
   console.log('*'.repeat(i));
+}
+//01-2 while문으로 만들기
+let i = 5;
+while (i >=1){
+  console.log('*'.repeat(i));
+  i--;
 }
 //02.
 for(let i=0; i< 5; i++){
@@ -85,6 +98,12 @@ for(let i=0; i< 5; i++){
 // 5-3 2
 // 5-4 1
 
+//02-1 while문으로 만들기 
+let i = 0;
+while(i < 5){
+  console.log('*'.repeat(5-i)); 
+  i++;
+}
 //1,3,5,7,9개의 별찍기 
 for(let i=1; i<=9;i++){
   console.log('*'.repeat(i++));
@@ -95,6 +114,12 @@ for(let i=1; i<=9;i++){
 //4 7
 //5 9
 
+//while문 만들기 
+let i = 1;
+while (i <=9){
+  console.log('*'.repeat(i++));
+  i++;
+}
 //9,7,5,3,1 별찍기
 for(let i=9;i>=1; i--){
   console.log('*'.repeat(i--));
@@ -104,6 +129,13 @@ for(let i=9;i>=1; i--){
 //3 5
 //4 3
 //5 1
+
+// while문 만들기 
+let i = 9;
+while(i >=1){
+  console.log('*'.repeat(i--));
+  i--;
+}
 
 //0,1,2,3,4개 띄어서 별찍기 
 for(let i=5; i>=1; i--){
