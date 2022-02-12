@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>계산기 만들기</title>
+  <style>
+      * { box-sizing: border-box;}
+      #result { width: 180px; height: 50px;margin: 5px; text-align: right;}
+      #operator { width: 50px;height: 50px; margin: 5px; text-align: center;}
+      button { width: 50px; height: 50px; margin: 5px;}
+  </style>
+</head>
+<body>
+  <input readonly id="operator">
+  <input readonly type="number" id="result">
+  <div class="row">
+    <button id="num-7">7</button>
+    <button id="num-8">8</button>
+    <button id="num-9">9</button>
+    <button id="plus">+</button>
+  </div>
+  <div class="row">
+  </div>
+  <button id="num-4">4</button>
+  <button id="num-5">5</button>
+  <button id="num-6">6</button>
+  <button id="minus">-</button>
+</div>
+  <div class="row">
+  <button id="num-1">1</button>
+  <button id="num-2">2</button>
+  <button id="num-3">3</button>
+  <button id="divide">/</button>
+</div>
+  <div class="row">
+    <button id="clear">c</button>
+    <button id="num-0">0</button>
+    <button id="calculate">=</button>
+    <button id="multiply">x</button>
+  </div>
+<script>
+  let numOne = '';
+  let operator = '';
+  let numTwo = '';
+  // 각각 변수 만들어주기
+  const $operator = document.querySelector('#operator');
+  const $result = document.querySelector('#result');
+  // 태그 선택하기
+  const onClickNumber = (event) => {
+      if(!operator){ //비어 있다.
+        numOne += event.target.textContent;
+        $result.value += event.target.textContent; // 공통된 절차를 각 분기점 내부에 넣는다.
+        return;
+      }
+      //비어있지 않다.
+        if(!numTwo){
+          $result.value = '';
+          // numTwo가 없으면 화면을 지워라 라는 뜻
+        }
+        numTwo += event.target.textContent;
+        $result.value += event.target.textContent; // 공통된 절차를 각 분기점 내부에 넣는다.
+      };
+    // 실행 할 동작을 채워준다.
+  
+   
+  document.querySelector('#num-0').addEventListener('click', onClickNumber);
+  document.querySelector('#num-1').addEventListener('click', onClickNumber);
+  document.querySelector('#num-2').addEventListener('click', onClickNumber);
+  document.querySelector('#num-3').addEventListener('click', onClickNumber);
+  document.querySelector('#num-4').addEventListener('click', onClickNumber);
+  document.querySelector('#num-5').addEventListener('click', onClickNumber);
+  document.querySelector('#num-6').addEventListener('click', onClickNumber);
+  document.querySelector('#num-7').addEventListener('click', onClickNumber);
+  document.querySelector('#num-8').addEventListener('click', onClickNumber);
+  document.querySelector('#num-9').addEventListener('click', onClickNumber);
+
+  const onClickOperator = (op) => () => {
+    if(numOne){
+      operator = op;
+      $operator.value =op;
+    } else {
+      alert('숫자를 먼저 입력하세요.');
+    }
+  }
+  document.querySelector('#plus').addEventListener('click',onClickOperator('+'));
+  document.querySelector('#minus').addEventListener('click',onClickOperator('-'));
+  document.querySelector('#divide').addEventListener('click',onClickOperator('/'));
+  document.querySelector('#multiply').addEventListener('click',onClickOperator('*'));
+  document.querySelector('#calculate').addEventListener('click',() => {});
+  document.querySelector('#clear').addEventListener('click',() => {});
+  // 버튼 하나하나를 자바스크립트 동작을 만들어주기 위해.
+</script> 
+</body>
+</html>
