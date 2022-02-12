@@ -25,7 +25,7 @@
     let newWord;//새로 입력한 단어
 
     const onClickButton = () => {
-      if(!word){ //제시어가 비어있는가?
+      if(!word || word[word.length -1 ]=== newWord[0]){ //제시어가 비어있는가?
         //비어있다.
         word =newWord; //입력한 단어가 제시어가 된다.(= 변수를 바꿔줌.)
         $word.textContent = word;
@@ -39,36 +39,13 @@
         }
           $input.value = '';
           $input.focus();
-      }else {
-        //비어 있지 않다.
-        if(word[word.length -1 ]=== newWord[0]){ //올바른가
-          word =newWord; //입력한 단어가 제시어가 된다.(= 변수를 바꿔줌.)
-          $word.textContent = word;
-          //$word에다 값을 넣어준다 이뜻임.(= 변수 뿐만 아니라 화면도 바꿔줌.)
-          const order = Number ($order.textContent);//뭔가를 저장할 때는 변수에다 저장하면 됨.
-          // 현재 순서
-          if(order + 1 > number ){
-            $order.textContent =1;
-          }else {
-            $order.textContent =order + 1;
-          }
-          $input.value = '';
-          $input.focus();
         } else { //올바르지 않은가
           alert('올바르지 않은 단어입니다.')
-          $input.value = '';
-          $input.focus();
-
-          //input.value
-          //button.textContent
-          //select.value (입력값)
-          //div.textContent
-          //textarea.value (큰 인풋)
-          //span.textContent
         }
-        }
+        $input.value = '';
+        $input.focus();
       };
-    const onInput =(evnet) => {
+    const onInput =(event) => {
       newWord = event.target.value;
     };
 
