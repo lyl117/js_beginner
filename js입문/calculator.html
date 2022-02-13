@@ -88,8 +88,42 @@
   document.querySelector('#minus').addEventListener('click',onClickOperator('-'));
   document.querySelector('#divide').addEventListener('click',onClickOperator('/'));
   document.querySelector('#multiply').addEventListener('click',onClickOperator('*'));
-  document.querySelector('#calculate').addEventListener('click',() => {});
-  document.querySelector('#clear').addEventListener('click',() => {});
+  document.querySelector('#calculate').addEventListener('click',() => {
+    if(numTwo){
+      switch (operator){
+        case '+':
+          $result.value =parseInt(numOne) + parseInt(numTwo);//문자열이어서 바꾸고 더해야함.
+          break;
+        case '-':
+          $result.value =parseInt(numOne) - parseInt(numTwo);// 나머지는 문자를 넣어도 숫자로 인식하기 때문에 괜찮음.
+          break;
+        case '*':
+          $result.value =parseInt(numOne) * parseInt(numTwo);
+          break;  
+        case '/':
+          $result.value =parseInt(numOne) / parseInt(numTwo);
+          break;
+        default:
+          break;
+        }
+      // switch -> if문
+    //     if (operator){
+    //       $result.value =parseInt(numOne) + parseInt(numTwo);
+    //       $result.value =parseInt(numOne) - parseInt(numTwo);
+    //       $result.value =parseInt(numOne) * parseInt(numTwo);
+    //       $result.value =parseInt(numOne) / parseInt(numTwo);
+        } else {
+          alert('숫자를 먼저 입력하세요.');
+    }
+  });
+  document.querySelector('#clear').addEventListener('click',() => {
+    numOne = '';
+    operator = '';
+    numTwo = '';
+    $operator.value ='';
+    $result.value = '';
+    // 모든걸 초기화 값을 넣어주면 됨. ('')
+  });
   // 버튼 하나하나를 자바스크립트 동작을 만들어주기 위해.
 </script> 
 </body>
