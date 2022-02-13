@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>숫자야구</title>
+</head>
+<body>
+  <form id="form">
+    <input type="text" id="input">
+    <button>확인</button>
+  </form>
+  <div id="logs"></div>
+  <script>
+    const $input = document.querySelector('#input'); // html 태그 선택한다는 뜻.
+    const $form = document.querySelector('#form');
+    const $logs = document.querySelector('#logs');
+
+    const numbers = [];
+    // 배열과 객체 중 무엇을 써야할지 모를 떄는 배열은 단순히 값만 넣을 때, 
+    // 객체는 값에다 이름을 붙여서 분리해야할 때 사용한다.
+    for (let n = 0; n < 9; n += 1){
+      numbers.push(n+1);
+    }
+    const answer = [];
+    for(let n =0; n < 4; n += 1){ // 네 번 반복.
+      const index = Math.floor(Math.random() * (numbers.length)); // 0-8정수
+      // 9-n을 빼주는 것은 무작위로 뽑기위해서도 있지만, 하나씩 사라지는 숫자중에서 랜덤으로 뽑기 위해서이다.
+      // 9대신 numbers.length로 편하게끔 바꿔줌.
+      answer.push(numbers[index]); // 뽑은 값을 넣음.
+      numbers.splice(index,1); // 하나 뺌.
+    }
+    console.log(answer);
+
+    const tries = [];
+    function checkInput(input){} //인풋값을 검사하는 코드 (checkInput)
+      if(input.length !== 4) { //길이는 4가 아닌가
+        return alert('4자리 숫자를 입력해주세요.');
+      }
+      if (new Set(input).size !== 4){// 중복된 숫자가 있는가
+        // new Set은 여기에 넣은것은 중복이 배제된다. 그리고 size로 값을 검사한다.
+        return alert('중복되지 않게 입력해주세요.');
+      }
+      if(tries.includes(input)) { // 이미 시도한 값은 아닌가
+        // 배열이 넣은 값이 원래 있던 값인가? 체크 해줌.
+        return alert('이미 시도한 값입니다.');
+      }
+      return true;
+
+    $form.addEventListener('submit',(event) => {
+      event.preventDefault(); //기본 동작 막기 (새로고침).
+      const value = $input.value; //== event.target.value(0), 변수 value에 값을 저장함.
+      $input.value = ''; // 다음 값 적으려고 지운다.
+      if(checkInput(value)) {
+        //입력값 문제 없음.
+        tries.push(value);
+      }else {
+        //에러있음 
+      }
+    });
+
+  </script>
+</body>
+</html>
