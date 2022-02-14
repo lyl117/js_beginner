@@ -54,6 +54,13 @@
       // 검사하는 코드 
       // 검사 한 후 return alert는 undefined이다. undefined는 value에 가게되면 false가 된다.
     }
+      function defeated(){
+        // 중복된 문장 줄이기 위해 defeated를 선언해줌.
+        const message = document.createTextNode(`패배! 정답은 ${answer.join('')}`);
+        $logs.appendChild(message);
+      }
+
+    let out =0;
     $form.addEventListener('submit',(event) => {
       event.preventDefault(); //기본 동작 막기 (새로고침).
       const value = $input.value; //== event.target.value(0), 변수 value에 값을 저장함.
@@ -70,17 +77,18 @@
       }
       if(tries.length >=9 ){
         //10번쨰인지 확인하는 구간
-        const message = document.createTextNode(`패배! 정답은 ${answer.join('')}`);
-        // document.createElement와 document.createTextNode는 화면에 태그나 텍스트를 만드는 메서드이다.
-        // 메세지를 추가하고 싶을 때 => $logs.append(document.createCreateTextNode('추가할 글자 넣기'));
-        //$logs.append(document.createElement('br')); 하고 또 위에거 넣고 이런식으로 추가하면 됨.
-        // 한줄아래에 넣고 싶을 때는 createElement를 사용해도 좋지만. innerHTML과 함꼐 <br/> 태그를 사용하면 됨.
-        // textContent는 문자열로서 텍스트로 인식하지만. innerHTML은 태그로 인식해서 <br/>로 사용하면 됨.
-        $logs.appendChild(message);
-        // append와 appendChild는 document.createElement와 document.createTextNode로 만든 태그나 텍스트를 그리는 역할이다.
-        // append는 여러개를 동시에, appendChild는 하나만넣을 수 있다.
-        //createTextNode 을 넣어주고 그다음 appendChild를 사용해야함.
-        // append를 주로 많이 사용함!
+        // const message = document.createTextNode(`패배! 정답은 ${answer.join('')}`);
+        // // document.createElement와 document.createTextNode는 화면에 태그나 텍스트를 만드는 메서드이다.
+        // // 메세지를 추가하고 싶을 때 => $logs.append(document.createCreateTextNode('추가할 글자 넣기'));
+        // //$logs.append(document.createElement('br')); 하고 또 위에거 넣고 이런식으로 추가하면 됨.
+        // // 한줄아래에 넣고 싶을 때는 createElement를 사용해도 좋지만. innerHTML과 함꼐 <br/> 태그를 사용하면 됨.
+        // // textContent는 문자열로서 텍스트로 인식하지만. innerHTML은 태그로 인식해서 <br/>로 사용하면 됨.
+        // $logs.appendChild(message);
+        // // append와 appendChild는 document.createElement와 document.createTextNode로 만든 태그나 텍스트를 그리는 역할이다.
+        // // append는 여러개를 동시에, appendChild는 하나만넣을 수 있다.
+        // //createTextNode 을 넣어주고 그다음 appendChild를 사용해야함.
+        // // append를 주로 많이 사용함!
+        defeated();
         return;
       }
       //몇 스트라이크 몇 볼인지 검사
@@ -92,17 +100,28 @@
         if(index > -1){ //일치하는 숫자 발견
           if(index === i){ // 자릿수도 같음.
             strike +=1;
-          }else { // 숫자만 같음.
-            ball +=1;
+          } else { // 숫자만 같음.
+            ball += 1;
           }
         }
       }
-        $logs.append(`${value}: ${strike} 스트라이크 ${ball}볼 `, document.createElement('br'));
-        // append에는 문자열과, br태그 추가하기.
-        tries.push(value);
-    
+      if(strike === 0 && ball === 0){
+        out++;
+        $logs.append(`${value}:아웃`,document.createElement('br'));
+        // 아웃이라고 표시하고 아웃횟수 1을 늘린다.
+      } else {
+        $logs.append(`${value}:${strike}스트라이크 ${ball}볼`,document.createElement('br'));
+                // append에는 문자열과, br태그 추가하기.
+                // 시도횟수를 1을 늘린다.
+      }
+      if(out === 3){ //3번째까지 계속 아웃되면 게임 끝.
+        // const message = document.createTextNode(`패배! 정답은 ${answer.join('')}`);
+        // $logs.appendChild(message);
+        defeated();
+        return;
+      }
+      tries.push(value);
     });
-
   </script>
 </body>
 </html>
