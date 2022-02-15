@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가위바위보게임</title>
+  <style>
+    #computer {
+      width: 142px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div id = "computer"></div>
+  <div>
+    <button id = "scissors" class="btn">가위</button>
+    <button id = "rock" class="btn">바위</button>
+    <button id = "paper" class="btn">보</button>
+  </div>
+  <div id="score">0</div>
+  <script>
+    const $computer = document.querySelector('#computer');
+    const $score = document.querySelector('#score');
+    const $rock = document.querySelector('#rock');
+    const $scissors = document.querySelector('#scissors');
+    const $paper = document.querySelector('#paper');
+    const IMG_URL ='./rsp.png';
+    $computer.style.background = `url(${IMG_URL}) -4px 0`; // css 수정 부분 // 끝에 0 0은 가로위치와 세로위치를 말함.
+    $computer.style.backgroundSize = 'auto 200px'; // 가로넓이와 세로높이
+
+    const rspX = {
+      scissors: '0', //가위
+      rock: '-220px', //바위
+      paper: '-440px', //보
+    };
+
+    let computerChoice= 'scissors';
+    const changeComputerHand = ()=> {
+      if(computerChoice=== 'scissors'){ //가위면
+        computerChoice= 'rock';
+      }else if (computerChoice ==='rock'){ //바위
+        computerChoice = 'paper';
+      }else if(computerChoice === 'paper') { // 보
+        computerChoice = 'scissors';  
+      }
+      // rspX.computerChoice는 문자열 computerChoice를 말한다.
+      $computer.style.background = `url(${IMG_URL}) ${rspX[computerChoice]} 0`; //[computerChoice]는 변수 값이 들어간다.
+      $computer.style.backgroundSize = 'auto 200px'; // 가로넓이와 세로높이
+      //setInterval(changeComputerHand,50); // 똑같은 함수를 두번 호출한다 = 재귀함수라고 함.
+    }
+    setInterval(changeComputerHand,50); //changeComputerHand()로 넣으면 안됨. 함수라 함수값을 넣어야한다는 뜻 
+    // setInterval은 함수간에 1초간격으로 정해져야 한다면 사용.
+    // setTimeout은 함수간에 1초이상만 되면 된다하면 사용.
+  </script>
+</body>
+</html>
