@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 연습</title>
+</head>
+<body>
+ <h1><a href="index.html">WEB</a></h1>
+ <input type="button" value="night" onclick="
+document.querySelector('body').style.backgroundColor = 'black';
+// body를 가리켜서 백그라운드 컬러를 블랙으로 바꾸겠다 이뜻.
+// querySelector대신 getelementById,class등 다양하게 사용가능.
+document.querySelector('body').style.color = 'white';
+">
+<input type="button" value="day" onclick="
+document.querySelector('body').style.backgroundColor = 'white';
+// 위와 동일함.
+document.querySelector('body').style.color = 'black';
+">
+</body>
+</html>
