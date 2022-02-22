@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX+JSON</title>
+</head>
+<body>
+  <script>
+    var req = new XMLHttpRequest();
+    req.onreadystatechange = function a (){
+      console.log(this.readyState, this.status);
+      if(this.readyState == 4){
+        console.log(this.response);
+        var data = JSON.parse(this.response);
+        for (var i in data){
+          var t = document.getElementById("template").cloneNode(true);
+          t.removeAttribute("id");
+          t.children[0].innerText = data[i].id;
+          t.children[1].innerText = data[i].msg;
+          document.body.appendChild(t);
+        }
+      }
+    }
+    req.open("GET", "./json_data.txt")
+    req.send();
+  </script>
+  <p id ="template">
+    <span class = "character">애국가</span> : <span class = "word">가사</span>
+  </p>
+</body>
+</html>
