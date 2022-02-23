@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>trycatch문</title>
+</head>
+<body>
+  <script>
+    function errFunc (){
+      throw "error";
+      console.log("this code will not be excuted");
+    }
+
+    function func(){
+      try {
+        console.log("function - 1");
+        errFunc();
+        console.log("function - 2");
+      }
+      catch (e){
+        console.log("catch error : ", e);
+      }
+      finally{
+        console.log("finally in function - this code will always be excuted");
+      }
+    }
+
+    try {
+        console.log("try - 1");
+        func();
+        console.log("try - 2");
+      }
+      catch(e){
+        console.log("catch error : ", e);
+      }
+      finally{
+        console.log("finally in function - this code will always be excuted");
+      }
+
+  </script>
+</body>
+</html>
