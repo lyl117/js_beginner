@@ -33,3 +33,20 @@ console.log("sum.call(kim)", sum.call(kim,'=>'));
 // call메소드를 이용하여 객체를 지정하여 sum을 사용할 수 있음
 console.log("sum.call(lee)",sum.call(lee,':'));
 // call은 여러인자를 가질 수 있는데 앞에는 this로 지정한 객체, 두번째는 함수의 인자로 들어갈 값이 된다.
+
+//bind
+var kim = {name:'kim',first:10,second:20}
+var lee = {name:'lee',first:10,second:10}
+lee.__proto__ = kim
+
+function sum(prefix){ 
+    return prefix+ (this.first + this.second);
+}
+
+//sum();
+console.log("sum.call(kim)",sum.call(kim,'=> '));
+console.log("sum.call(lee)",sum.call(lee,': '));
+
+var kimSum = sum.bind(kim, '-> ');
+// call은 this의 값을 변경한다면, bind는 내부적으로 this의 값을 영구적으로 바꿔주는 함수를 바꾼다.
+console.log('kimSum()', kimSum());
