@@ -1,0 +1,58 @@
+
+div {
+  text-align: center;
+  font-size: 14px;
+  padding: 0 0 45px;
+}
+
+div ul {
+  display: flex; 
+  justify-content: center;
+  list-style:none;
+  padding-left:0px;
+}
+
+div ul li {
+  position: relative;
+  padding: 0 18px ;
+  top: 20px;
+
+}
+
+/* div ul li~li ::after{
+  content: ""; 
+  position: absolute; 
+  left: 0px; 
+  top: 2px; 
+  height:14px; 
+  width: 1px; 
+  background: rgb(121, 121, 121);
+  transform: rotate(0deg);
+}
+div ul li~li~li ::after{
+  display: none;
+}
+
+div ul li~li~li ::before {
+  content: ""; 
+  position: absolute; 
+  left: 0px; 
+  top: 2px; 
+  height:14px; 
+  width: 1px; 
+  background: rgb(121, 121, 121);
+  transform: rotate(25deg);
+} */
+
+div ul li a {
+  font-size: 14px; 
+  color:rgb(121, 121, 121);
+}
+
+a:link {
+  text-decoration: none!important;
+}
+a:visited {
+  color:rgb(121, 121, 121);
+}
+
