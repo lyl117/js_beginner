@@ -54,6 +54,15 @@ body {
   }
  }
 
+ @media print {
+  a {
+    text-decoration: none;
+  }
+  a:after {
+    display: inline;
+    content: "("attr(href)")";
+  }
+}
   </style>
 </head>
 <body>
