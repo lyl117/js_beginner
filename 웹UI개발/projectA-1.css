@@ -1,0 +1,7 @@
+header {
+  display: flex;
+  background-color: black;
+  width: auto;
+  height: 140px;
+  color: aliceblue;
+}
