@@ -22,3 +22,30 @@ ul {
   padding: 10px;
   list-style: none;
 }
+
+.portfolio{
+  width: 90%;
+  margin: 10px auto;
+}
+
+.first {
+  border: 1px solid black;
+  float: left;
+  width:30%;
+  box-sizing: border-box;
+}
+
+.second{
+  border: 1px solid black;
+  float: left;
+  margin-left: 5%;
+  width:30%;
+  box-sizing: border-box;
+}
+
+.third{
+  border: 1px solid black;
+  float: right;
+  width:30%;
+  box-sizing: border-box;
+}
