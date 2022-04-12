@@ -68,9 +68,26 @@ ul {
   top: 250px;
 }
 
-.one {
+.one { /* 가로 줄 */
   position: relative;
   left: 300px;
   top: 160px;
   width: 1039px;
 }
+
+table {
+  border: 1px solid #989898;
+  border-collapse: collapse;
+  position: relative;
+  left: 300px;
+  top: 200px;
+  width: 1039px;
+  }
+
+ tr{
+    border: 1px solid #a5a4a4;
+    padding: 10px;
+    height: 150px;
+     
+ } 
+  
