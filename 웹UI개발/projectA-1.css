@@ -75,19 +75,33 @@ ul {
   width: 1039px;
 }
 
-table {
+table { 
   border: 1px solid #989898;
   border-collapse: collapse;
   position: relative;
   left: 300px;
   top: 200px;
   width: 1039px;
-  }
+  } 
 
+.table {
+  margin: 0px 0px 40px;
+  background-color: rgb(164, 164, 164);
+}
+#boxs {
+  height: 80px;
+  
+}
+
+.form {
+  margin: 20px 0px 40px;
+}
+.list {
+  margin: 20px 0px 40px;
+}
  tr{
     border: 1px solid #a5a4a4;
     padding: 10px;
-    height: 150px;
-     
+    height: 80px;
  } 
   
