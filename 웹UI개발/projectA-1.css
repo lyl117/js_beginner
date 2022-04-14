@@ -86,22 +86,61 @@ table {
 
 .table {
   margin: 0px 0px 40px;
-  background-color: rgb(164, 164, 164);
+  border-top: 1px solid #cccccc;
 }
-#boxs {
-  height: 80px;
-  
+#table {
+  background-color: rgb(228, 228, 228);
+  color: black;
+  display: block;
+  height: 50px;
 }
-
 .form {
   margin: 20px 0px 40px;
 }
+#form {
+  background-color: rgb(228, 228, 228);
+  color: black;
+  display: block;
+  height: 50px;
+
+}
 .list {
-  margin: 20px 0px 40px;
+  bottom: 0px;
+}
+#list {
+  background-color: rgb(228, 228, 228);
+  color: black;
+  display: block;
+  height: 50px;
 }
  tr{
     border: 1px solid #a5a4a4;
     padding: 10px;
-    height: 80px;
+    height: 100%;
  } 
+
+ #contents1 {
+  display: block;
+  height: 100px;
+  padding: 1px solid rgb(228, 228, 228);
+  vertical-align: middle;
+ }
+ #contents2 {
+  display: block;
+  height: 100px;
+  padding: 1px solid rgb(228, 228, 228);
+ }
+ #contents3{
+  display: block;
+  height: 100px;
+  padding: 1px solid rgb(228, 228, 228);
+ }
   
+ #footer {
+  width: 100%;
+  height: 99999px; /* footer의 높이 */
+  position: absolute;  
+  bottom: 0;
+  left: 0;
+  display: block;
+ }
