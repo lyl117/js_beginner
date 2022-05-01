@@ -1,25 +1,74 @@
 @charset "UTF-8";
+@import url(style.css);
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
 
 body {
-  background-color: rebeccapurple;
+  background-color: #5B2386;
 }
 
 .header {
-  position: absolute;
-  display: inline-block;
-  text-align: center;
+  position: relative;
 }
 .header .img1 {
-  position: relative;
-  height: 100px;
-
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 15%); 
 }
 .header .img2 {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 90%);
+  width: 564px;
 }
-.quote {
+.header img {
+  width: 100%;
+  height: auto;
+}
+
+.header p {
   font-family: 'OTEnjoystoriesBA';
   color: #F5DF4D;
   font-size: 35px;
-  margin: 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -350%);
+}
+
+.quote2 {
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  font-family: 'GmarketSansMedium';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+.quote2 span {
+  font-family: 'GmarketSansBold';
+  font-size: 20px;
+}
+.quote2 p {
+  transform: translate(-50%, -20%);
+  font-size: 17px;
+}
+.quote2 img {
+  transform: translate(-70%, 50%);
+  
+}
+.quote2 h2 {
+  transform: translate(-50%, 200%);
+  font-size: 20px;
+}
+.quote2 > h2 input {
+  padding: 15px 20px;
+  margin: 0 15px;
+  border: none;
+  border-radius: 10px;
+  width: 200px;
+
 }
