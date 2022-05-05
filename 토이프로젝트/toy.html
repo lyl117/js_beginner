@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>toy</title>
+</head>
+<body>
+  <ul class="list">
+  <li><strong>용돈</strong>-<span>30000</span></li>
+</ul>
+  <script>
+    // const 요청url = 'https://eulsoo.github.io/list.json';
+    // const 요청객체 = new XMLHttpRequest();
+    // 요청객체.open('GET', 요청url);
+    // 요청객체.responseType = 'json';
+    // 요청객체.send();
+    // 요청객체.onload = () => {
+    //   const obj = 요청객체.response;
+    //   할일(obj);
+    // }
+      
+
+    fetch('https://eulsoo.github.io/list.json')
+    .then((res)=> {
+      return res.json()
+    })
+    .then(function(obj){
+      console.log(obj);
+      할일(obj);
+    })
+    
+
+
+
+
+
+
+    function 할일(obj){
+    console.log(obj)
+    const ulElem = document.querySelector('.list');
+
+    for (let i = 0; i < obj.length; i++){
+      //li만들기
+      const li = document.createElement('li');
+      // item value 값 가져와서 li 넣기
+      li.textContent = obj[i].item 
+      // li = item 값 넣기 
+      ulElem.appendChild(li);
+    }
+   
+    };
+  </script>
+</body>
+</html>
