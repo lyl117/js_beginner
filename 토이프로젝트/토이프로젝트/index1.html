@@ -1,199 +1,402 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <title>금융앱만들기-toyproject</title>
-</head>
-<body>
-  <!-- 슬라이드 -->
-  <!-- 홈화면 -->
-  <div class="box">
-        <!-- <div class="swiper-container"> 
-          <div class="swiper-wrapper"> 
-            <div class="swiper-slide"> -->
-              <div class="slide">
-                <div class="nav">
-                  <span>9:41</span>
-                  <div class="img">
-                    <span><img src="./image/Cellular Connection.png" alt="연결" class="connection"></span>
-                    <span><img src="./image/Wifi.png" alt="와이파이" class="wifi"></span>
-                    <span><img src="./image/Battery.png" alt="베터리" class="battery"></span>
-                  </div>
-                </div>
-                <div class="main">
-                  <header>
-                    <div class="item">
-                      <a href="#"><img src="./image/아바타.png" alt="아바타" class="avata"></a>
-                    </div>
-                    <div class="item">
-                      <span>생활비</span>
-                    </div>
-                    <div class="icon">
-                      <a href="#"><img src="./image/간편결제아이콘.png" alt="결제"></a>
-                      <a href="#"><img src="./image/검색아이콘.png" alt="검색"></a>
-                    </div>
-                  </header>
-                  <div class="account">
-                    <ul>
-                      <li>
-                          <span>355-673877-78773</span>
-                          <span>이체</span>
-                      </li>
-                      <li>1,240,000<span>원</span></li>
-                      <li><input type="range"><span><img src="./image/Vector.png" alt=""></span></li>
-                      <li>5일 동안 210,000원 남음</li>
-                    </ul>
-                  </div>
-                  <div class="link">
-                    <h3>지금 낮은 이자로 생활대출을 신청하세요!</h3>
-                    <a href="#">Go</a>
-                  </div>
-                    <div class="main2">
-                      <img src="./image/올림.png" alt="올림" class="img-up">
-                      <ul class="plan">
-                        <li class="label">여행가자<br>842,200원</li>
-                        <li class="label">냉장고사기<br>142,200원</li>
-                        <!-- <li>저금통 ...</li> -->
-                      </ul>
-                      <div class="pay-box">
-                        <div class="pay-list">
-                          <div class="title">
-                            <div class="when">오늘</div>
-                            <div class="sum">127,600원 지출</div>
-                          </div>
-                          <div class="history">
-                              <ul>
-                                <li><span>미스터피자</span><span>32,000</span></li>
-                                <li><span>택시</span><span>4,800</span></li>
-                                <li><span>이마트</span><span>26,000</span></li>
-                                <li><span>스타벅스</span><span>4,800</span></li>
-                                <li><span>전길수</span><span>20,000</span></li>
-                              </ul>
-                          </div>
-                        </div>
-                        <div class="pay-list">
-                          <div class="title">
-                            <div class="when">어제</div>
-                            <div class="sum">127,600원 지출</div>
-                          </div>
-                          <div class="history">
-                              <ul class="ht">
-                                <li><span>미스터피자</span><span>32,000</span></li>
-                                <li><span>택시</span><span>4,800</span></li>
-                                <li><span>이마트</span><span>26,000</span></li>
-                                <li><span>스타벅스</span><span>4,800</span></li>
-                                <li><span>전길수</span><span>20,000</span></li>
-                              </ul>
-                          </div>
-                        </div>
-                      </div>
-    
-                    </div>
-                    <div class="menu">
-                      <ul>
-                        <li><button><img src="./image/mdi_home.png" alt=""></button></li>
-                        <li><button><img src="./image/Group 28.png" alt=""></button></li>
-                        <li><button><img src="./image/Glyph_ .png" alt=""></button></li>
-                        <li><button><img src="./image/Glyph_ .png" alt=""></button></li>
-                      </ul>
-                    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style1.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- <script defer src="./data.js"></script> -->
+    <script defer src="./data2.js"></script>
+    <title>금융앱만들기-toyproject</title>
+  </head>
+  <body>
+    <!-- 슬라이드 -->
+    <!-- 홈화면 생활비-->
+    <div class="box">
+      <div class="swiper-container first">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide">
+              <div class="nav">
+                <span>9:41</span>
+                <div class="img">
+                  <span
+                    ><img
+                      src="./image/Cellular Connection.png"
+                      alt="연결"
+                      class="connection"
+                  /></span>
+                  <span
+                    ><img src="./image/Wifi.png" alt="와이파이" class="wifi"
+                  /></span>
+                  <span
+                    ><img
+                      src="./image/Battery.png"
+                      alt="베터리"
+                      class="battery"
+                  /></span>
                 </div>
               </div>
-            
+              <div class="main">
+                <header>
+                  <div class="item">
+                    <a href="#"
+                      ><img src="./image/아바타.png" alt="아바타" class="avata"
+                    /></a>
+                  </div>
+                  <div class="item">
+                    <span>생활비</span>
+                  </div>
+                  <div class="icon">
+                    <a href="#"
+                      ><img src="./image/간편결제아이콘.png" alt="결제"
+                    /></a>
+                    <a href="#"
+                      ><img src="./image/검색아이콘.png" alt="검색"
+                    /></a>
+                  </div>
+                </header>
+                <div class="account">
+                  <ul>
+                    <li>
+                      <span>355-673877-78773</span>
+                      <span>이체</span>
+                    </li>
+                    <li>1,240,000<span>원</span></li>
+                    <li>
+                      <input type="range" /><span
+                        onclick="location.href='./index2.html'"
+                        style="cursor: pointer"
+                        ><img src="./image/Vector.png" alt="graph"
+                      /></span>
+                    </li>
+                    <li>5일 동안 210,000원 남음</li>
+                  </ul>
+                </div>
+                <div class="link">
+                  <h3>지금 낮은 이자로 생활대출을 신청하세요!</h3>
+                  <a href="#">Go</a>
+                </div>
+                <div class="main2">
+                  <img src="./image/올림.png" alt="올림" class="img-up" />
+                  <ul class="plan">
+                    <li class="label">여행가자<br />842,200원</li>
+                    <li class="label">냉장고사기<br />142,200원</li>
+                    <!-- <li>저금통 ...</li> -->
+                  </ul>
+                  <div class="pay-box">
+                    <div class="pay-list">
+                      <div class="title">
+                        <div class="when"></div>
+                        <div class="sum"></div>
+                      </div>
+                      <div class="history">
+                        <ul class="ht">
+                          <!-- <li><span>미스터피자</span><span>32,000</span></li>
+                                <li><span>택시</span><span>4,800</span></li>
+                                <li><span>이마트</span><span>26,000</span></li>
+                                <li><span>스타벅스</span><span>4,800</span></li>
+                                <li><span>전길수</span><span>20,000</span></li> -->
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="pay-list">
+                      <div class="title">
+                        <div class="when">어제</div>
+                        <div class="sum">127,600원 지출</div>
+                      </div>
+                      <div class="history">
+                        <ul class="ht">
+                          <!-- <li><span>미스터피자</span><span>32,000</span></li>
+                                <li><span>택시</span><span>4,800</span></li>
+                                <li><span>이마트</span><span>26,000</span></li>
+                                <li><span>스타벅스</span><span>4,800</span></li>
+                                <li><span>전길수</span><span>20,000</span></li> -->
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu">
+                  <ul>
+                    <li>
+                      <button><img src="./image/mdi_home.png" alt="" /></button>
+                    </li>
+                    <li>
+                      <button><img src="./image/Group 28.png" alt="" /></button>
+                    </li>
+                    <li>
+                      <button><img src="./image/Glyph_ .png" alt="" /></button>
+                    </li>
+                    <li>
+                      <button><img src="./image/Glyph_ .png" alt="" /></button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- <div class="swiper-pagination"></div> 
-          <div class="swiper-prev"></div> 
-          <div class="swiper-next"></div> 
-          <div class="swiper-scrollbar"></div>  -->
+          <div class="swiper-slide">
+            <div class="slide">
+              <div class="nav">
+                <span>9:41</span>
+                <div class="img">
+                  <span
+                    ><img
+                      src="./image/Cellular Connection.png"
+                      alt="연결"
+                      class="connection"
+                  /></span>
+                  <span
+                    ><img src="./image/Wifi.png" alt="와이파이" class="wifi"
+                  /></span>
+                  <span
+                    ><img
+                      src="./image/Battery.png"
+                      alt="베터리"
+                      class="battery"
+                  /></span>
+                </div>
+              </div>
+              <div class="main">
+                <header>
+                  <div class="item">
+                    <a href="#"
+                      ><img src="./image/아바타.png" alt="아바타" class="avata"
+                    /></a>
+                  </div>
+                  <div class="item">
+                    <span>의민이 용돈</span>
+                  </div>
+                  <div class="icon">
+                    <a href="#"
+                      ><img src="./image/간편결제아이콘.png" alt="결제"
+                    /></a>
+                    <a href="#"
+                      ><img src="./image/검색아이콘.png" alt="검색"
+                    /></a>
+                  </div>
+                </header>
+                <div class="account">
+                  <ul>
+                    <li>
+                      <span>23-232117-34773</span>
+                      <span>이체</span>
+                    </li>
+                    <li>440,000<span>원</span></li>
+                    <li>
+                      <input type="range" /><span
+                        onclick="location.href='./index2.html'"
+                        style="cursor: pointer"
+                        ><img src="./image/Vector.png" alt="graph"
+                      /></span>
+                    </li>
+                    <li>5일 동안 210,000원 남음</li>
+                  </ul>
+                </div>
+                <div class="link">
+                  <h3>지금 낮은 이자로 생활대출을 신청하세요!</h3>
+                  <a href="#">Go</a>
+                </div>
+                <div class="main2">
+                  <img src="./image/올림.png" alt="올림" class="img-up" />
+                  <ul class="plan">
+                    <li class="label">게임기^^<br />142,200원</li>
+                    <li class="label">기부실천!<br />82,200원</li>
+                    <!-- <li>저금통 ...</li> -->
+                  </ul>
+                  <div class="pay-box">
+                    <div class="pay-list">
+                      <div class="title">
+                        <div class="when">오늘</div>
+                        <div class="sum">127,600원 지출</div>
+                      </div>
+                      <div class="history">
+                        <ul class="ht">
+                          <li><span>미스터피자</span><span>32,000</span></li>
+                          <li><span>택시</span><span>4,800</span></li>
+                          <li><span>이마트</span><span>26,000</span></li>
+                          <li><span>스타벅스</span><span>4,800</span></li>
+                          <li><span>전길수</span><span>20,000</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="pay-list">
+                      <div class="title">
+                        <div class="when">어제</div>
+                        <div class="sum">127,600원 지출</div>
+                      </div>
+                      <div class="history">
+                        <ul class="ht">
+                          <li><span>미스터피자</span><span>32,000</span></li>
+                          <li><span>택시</span><span>4,800</span></li>
+                          <li><span>이마트</span><span>26,000</span></li>
+                          <li><span>스타벅스</span><span>4,800</span></li>
+                          <li><span>전길수</span><span>20,000</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu">
+                  <ul>
+                    <li>
+                      <button><img src="./image/mdi_home.png" alt="" /></button>
+                    </li>
+                    <li>
+                      <button><img src="./image/Group 28.png" alt="" /></button>
+                    </li>
+                    <li>
+                      <button><img src="./image/Glyph_ .png" alt="" /></button>
+                    </li>
+                    <li>
+                      <button><img src="./image/Glyph_ .png" alt="" /></button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide">
+              <div class="nav">
+                <span>9:41</span>
+                <div class="img">
+                  <span
+                    ><img
+                      src="./image/Cellular Connection.png"
+                      alt="연결"
+                      class="connection"
+                  /></span>
+                  <span
+                    ><img src="./image/Wifi.png" alt="와이파이" class="wifi"
+                  /></span>
+                  <span
+                    ><img
+                      src="./image/Battery.png"
+                      alt="베터리"
+                      class="battery"
+                  /></span>
+                </div>
+              </div>
+              <div class="main">
+                <header>
+                  <div class="item">
+                    <a href="#"
+                      ><img src="./image/아바타.png" alt="아바타" class="avata"
+                    /></a>
+                  </div>
+                  <div class="item">
+                    <span>할머니 계좌</span>
+                  </div>
+                  <div class="icon">
+                    <a href="#"
+                      ><img src="./image/간편결제아이콘.png" alt="결제"
+                    /></a>
+                    <a href="#"
+                      ><img src="./image/검색아이콘.png" alt="검색"
+                    /></a>
+                  </div>
+                </header>
+                <div class="account">
+                  <ul>
+                    <li>
+                      <span>155-23422-78773</span>
+                      <span>이체</span>
+                    </li>
+                    <li>3,140,000<span>원</span></li>
+                    <li>
+                      <input type="range" /><span
+                        onclick="location.href='./index2.html'"
+                        style="cursor: pointer"
+                        ><img src="./image/Vector.png" alt="graph"
+                      /></span>
+                    </li>
+                    <li>5일 동안 120,000원 남음</li>
+                  </ul>
+                </div>
+                <div class="link">
+                  <h3>지금 낮은 이자로 생활대출을 신청하세요!</h3>
+                  <a href="#">Go</a>
+                </div>
+                <div class="main2">
+                  <img src="./image/올림.png" alt="올림" class="img-up" />
+                  <ul class="plan">
+                    <li class="label">딸 냉장고<br />542,200원</li>
+                    <li class="label">아들 컴퓨터<br />432,200원</li>
+                    <!-- <li>저금통 ...</li> -->
+                  </ul>
+                  <div class="pay-box">
+                    <div class="pay-list">
+                      <div class="title">
+                        <div class="when">오늘</div>
+                        <div class="sum">127,600원 지출</div>
+                      </div>
+                      <div class="history">
+                        <ul class="ht">
+                          <!-- <li><span>미스터피자</span><span>32,000</span></li>
+                                <li><span>택시</span><span>4,800</span></li>
+                                <li><span>이마트</span><span>26,000</span></li>
+                                <li><span>스타벅스</span><span>4,800</span></li>
+                                <li><span>전길수</span><span>20,000</span></li> -->
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="pay-list">
+                      <div class="title">
+                        <div class="when">어제</div>
+                        <div class="sum">127,600원 지출</div>
+                      </div>
+                      <div class="history">
+                        <ul class="ht">
+                          <!-- <li><span>미스터피자</span><span>32,000</span></li>
+                                <li><span>택시</span><span>4,800</span></li>
+                                <li><span>이마트</span><span>26,000</span></li>
+                                <li><span>스타벅스</span><span>4,800</span></li>
+                                <li><span>전길수</span><span>20,000</span></li> -->
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu">
+                  <ul>
+                    <li>
+                      <button><img src="./image/mdi_home.png" alt="" /></button>
+                    </li>
+                    <li>
+                      <button><img src="./image/Group 28.png" alt="" /></button>
+                    </li>
+                    <li>
+                      <button><img src="./image/Glyph_ .png" alt="" /></button>
+                    </li>
+                    <li>
+                      <button><img src="./image/Glyph_ .png" alt="" /></button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-prev"></div>
+          <div class="swiper-next"></div>
+          <div class="swiper-scrollbar"></div>
         </div>
       </div>
-    </div><!-- .box 끝 -->
-    
-    
-  <script src="./main.js">
-
-  // async function fetchList() {
-  //   let response = await fetch(
-  //     `https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6e4d3d3-c52c-4ea8-b665-968a3b17c5ea/bank.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220506%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220506T071024Z&X-Amz-Expires=86400&X-Amz-Signature=b64692ad33e835d4c2d70f4c02e816a19d8f2d396044b54537386174238ceaf5&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bank.json%22&x-id=GetObject`
-  //   );
-  //   fetch('https://eulsoo.github.io/list.json')
-  //   .then((res)=> {
-  //     return res.json()
-  //   })
-  //   .then(function(obj){
-  //     console.log(obj);
-  //     list(obj);
-  //   })
-    
-  async function getData() {
-  const response = await fetch(url);
-  const json = await response.json();
-  console.log(json);
-}
-
-  // fetchList();
-    //  fetch('https://eulsoo.github.io/list.json')
-    // .then((res)=> {
-    //   return res.json()
-    // })
-    // .then(function(obj){
-    //   console.log(obj);
-    //   list(obj);
-    // })
-
-
-  // const ul = document.getElementById('ht');
-  // const list = document.createDocumentFragment();
-  // const url = 'https://eulsoo.github.io/list.json';
-
-  // fetch(url)
-  //   .then((response) => {
-  //     return response.json();
-  //   })
-  //   .then((data) => {
-  //     let ht = data;
-
-    //   ht.map(function(ht) {
-    //     let li = document.createElement('li');
-    //     let name = document.createElement('h2s');
-    //     let email = document.createElement('span');
-
-    //     name.innerHTML = `${li.name}`;
-    //     email.innerHTML = `${span.email}`;
-
-    //     li.appendChild(name);
-    //     li.appendChild(email);
-    //     list.appendChild(li);
-    //     });
-    // }).
-    // .catch(function(error) {
-    //   console.log(error);
-    // });
-
-  // ul.appendChild(list);
-
-  //  function list(obj){
-  //   console.log(obj)
-  //   const ulElem = document.querySelector('.history');
-
-  //   for (let i = 0; i < obj.length; i++){
-  //     //li만들기
-  //     const li = document.createElement('li');
-  //     // item value 값 가져와서 li 넣기
-  //     li.textContent = obj[i].item 
-  //     // li = item 값 넣기 
-  //     ulElem.appendChild(li);
-  //   }
-   
-  //   };
-</script>
-</body>
+    </div>
+    <!-- .box 끝 -->
+    <script defer src="./main.js"></script>
+  </body>
 </html>
