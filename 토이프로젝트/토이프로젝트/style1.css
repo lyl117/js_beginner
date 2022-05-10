@@ -22,8 +22,8 @@ button {
 }
 
 .swiper-slide {
-  width: 375px;
-  height: 812px;
+  width: 390px;
+  /* height: 812px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,17 +181,8 @@ input[type="range"]::-webkit-slider-thumb {
   background: #ff5f00;
   border-radius: 6px;
   border: 1.5px solid #ffffff;
-  cursor: pointer;
+  cursor: pointe;
 }
-
-/* input[type="range"]::-moz-range-thumb {
-  -webkit-appearance: none;
-  width: 6px;
-  height: 20px;
-  background: #ff5f00;
-  border-radius: 6px;
-  border: 1.5px solid #ffffff;
-} */
 
 .account ul > li:nth-of-type(3) img {
   width: 16px;
@@ -242,11 +233,11 @@ input[type="range"]::-webkit-slider-thumb {
   font-size: 12px;
   background-color: #dadada;
   color: white;
-  min-width: 140px;
+  min-width: 145px;
   z-index: 10;
 }
 .main2 .plan li {
-  margin-right: 20px;
+  margin-right: 10px;
   position: relative;
 }
 .main2 .plan li::after {

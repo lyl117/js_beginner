@@ -6,59 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style2.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     <script defer src="./main2.js"></script>
+    <script defer src="./main3.js"></script>
     <title>Document</title>
   </head>
   <body>
     <div class="slide">
-      <div class="nav">
-        <span>9:41</span>
-          <div class="img">
-            <span><img src="./image/Cellular Connection.png" alt="연결" class="connection"></span>
-            <span><img src="./image/Wifi.png" alt="와이파이" class="wifi"></span>
-            <span><img src="./image/Battery.png" alt="베터리" class="battery"></span>
+      <div class="label">
+        <div class="nav">
+          <span>9:41</span>
+            <div class="img">
+              <span><img src="./image/Cellular Connection.png" alt="연결" class="connection"></span>
+              <span><img src="./image/Wifi.png" alt="와이파이" class="wifi"></span>
+              <span><img src="./image/Battery.png" alt="베터리" class="battery"></span>
+            </div>
           </div>
-            </div>
-            <div class="title11">
-              <div class="close" onclick="location.href='./index1.html'">닫기</div>
+          <div class="title11">
+            <div class="close" onclick="location.href='./index1.html'">닫기</div>
               <div class="out">지출 관리</div>
-            <div class="main">
-              <div class="money">
-              <span>기준금액설정</span><span>2,100,000원</span>
-            </div>
-              <div class="input"><input type="range" /><span
-                        onclick="location.href='./index2.html'"
-                        style="cursor: pointer"
-                        ></div>
+          </div>
+          </div>
+          <!-- label -->
+          <div class="main">
+          <div class="money">
+            <span>기준금액설정</span><span>2,100,000원</span>
+          </div>
+            <ul>
+              <li><input type="range" />
+                <span style="cursor: pointer"></li>
+            </ul>      
               <div class="report">
-                <div>일간 리포트</div>
-                  <div>
-                    <canvas id="myChart"></canvas>
-                  </div>
+                <div class="month">일간 리포트</div>
+                <div><canvas id="myChart" width="1200" height="300">></canvas></div>
               </div>
-              <div class="pattern">
+              <div class="patten">
                 <div>6월 지출 패턴</div>
+              <div class="money">
+                <div><canvas id="myPatten" width="308" height="308"></canvas></div>
+                <span class="money2">1,736,500원</span>
               </div>
                 <ul>
-                  <li>
-                    <span></span><span></span><span></span>
-                    <span></span><span></span><span></span>
-                    <span></span><span></span><span></span>
-                  </li>
+                  <li><img src="./image/car.png" alt="주유비"><span>주유비</span><span>56,000원</span><br></li>
+                  <li><img src="./image/dumbbell.png" alt="건강관리비"><span>건강관리비</span><span>80,000원</span><br></li>
+                  <li><img src="./image/food (1).png" alt="외식비"><span>외식비</span><span>233,000원</span><br></li>
+                  <li><img src="./image/shopping.png" alt="장보기"><span>장보기</span><span>390,000원</span><br></li>
+                  <li><img src="./image/store.png" alt="상점"><span>상점</span><span>46,000원</span><br></li>
                 </ul>
+                </div>
               </div>   
               <!-- main -->
-
               <div class="menu">
-                      <ul>
-                        <li><button><img src="./image/mdi_home.png" alt=""></button></li>
-                        <li><button><img src="./image/Group 28.png" alt=""></button></li>
-                        <li><button><img src="./image/Glyph_ .png" alt=""></button></li>
-                        <li><button><img src="./image/Glyph_ .png" alt=""></button></li>
-                      </ul>
-                    </div>
-                    <!-- menu -->
+                <ul>
+                  <li><button><img src="./image/Vector2.svg" alt=""></button></li>
+                  <li><button><img src="./image/arrow.svg" alt=""></button></li>
+                  <li><button><img src="./image/more.svg" alt=""></button></li>
+                  <li><button><img src="./image/chat.svg" alt=""></button></li>
+                </ul>
+              </div>
+              <!-- menu -->
             </div>
-             <!-- slide -->
-  </body>
-</html>
+            <!-- slide -->
+          </body>
+        </html>

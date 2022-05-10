@@ -18,7 +18,7 @@ async function fetchList() {
 
   let beforeDate = "";
 
-  const divElem = document.querySelector(".pay-list");
+  const divElem = document.querySelector(".ht");
   let ulElem;
 
   // ul 생성 + 날짜 및 합계 li 생성  반복문
