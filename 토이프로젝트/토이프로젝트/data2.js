@@ -8,7 +8,7 @@ function dayChange(date) {
 async function fetchList() {
   // josn file에서 자료 가지고 옴
   let response = await fetch(
-    `https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6e4d3d3-c52c-4ea8-b665-968a3b17c5ea/bank.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220509%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220509T070905Z&X-Amz-Expires=86400&X-Amz-Signature=bdd390d590684649af20dfd5dcb29f6d75f1c96b46d99a7e28f20c187bc56e90&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bank.json%22&x-id=GetObject`
+    `https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6e4d3d3-c52c-4ea8-b665-968a3b17c5ea/bank.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220510%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220510T141134Z&X-Amz-Expires=86400&X-Amz-Signature=1d9e8efc71d6965354ab3093ab6be070504600244cf6fcddd1b8bea4de3f1e50&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bank.json%22&x-id=GetObject`
   );
   const obj = await response.json();
 
