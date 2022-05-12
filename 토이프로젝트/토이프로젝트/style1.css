@@ -181,7 +181,7 @@ input[type="range"]::-webkit-slider-thumb {
   background: #ff5f00;
   border-radius: 6px;
   border: 1.5px solid #ffffff;
-  cursor: pointe;
+  cursor: pointer;
 }
 
 .account ul > li:nth-of-type(3) img {
